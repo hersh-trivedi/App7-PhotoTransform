@@ -102,7 +102,13 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          drawImageIOSFix(context2,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+        var canvas2 = document.getElementById('dataCanvas');
+        var context2 = canvas2.getContext("2d")
+        /* I am calling my second canvas (id "dataCanvas) */
+         
+      
+
+        // iterate over all pixels
           
         } // end of img.onload
         
