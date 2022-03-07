@@ -121,8 +121,12 @@
         I am setting the red intensity and green initensities of the pixel equal to 0
         */
         
-         
-          
+        context.putImageData(imageData, 0, 0) 
+        }
+        
+        /*
+        I am putting the image data with only the blue intensities on my second canvas with "context.putImageData"
+       
         } // end of img.onload
         
         img.src = reader.result;
