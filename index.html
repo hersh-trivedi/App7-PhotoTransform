@@ -103,12 +103,25 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
         var canvas2 = document.getElementById('dataCanvas');
-        var context2 = canvas2.getContext("2d")
-        /* I am calling my second canvas (id "dataCanvas) */
+        var context2 = canvas2.getContext("2d");
+        
+        /* I am calling my second canvas (id "dataCanvas") */
          
-      
-
-        // iterate over all pixels
+        var imageData = context2.getImageData(0, 0, 600, 500);
+        var data = imageData.data;
+        
+        /* I am getting my image data (pixel data) with "context.getImageData" */
+         
+        for (var i = 0, n = data.length; i < n; i += 4) {
+          data[i] = 0;
+          data[i + 1] = 0;
+        }
+        
+        /* I am removing the red and green intensities from my pixels using the function above 
+        I am setting the red intensity and green initensities of the pixel equal to 0
+        */
+        
+         
           
         } // end of img.onload
         
