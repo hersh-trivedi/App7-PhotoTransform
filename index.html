@@ -142,6 +142,21 @@
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
+     
+     <canvas id="dataCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+        var canvas2 = document.getElementById('myCanvas');
+        var context2 = canvas2.getContext("2d");
+        context2.font = '20pt Calibri';
+        context2.fillStyle = "black";
+        context2.fillText("Blue image will go here", 10, 20);
+      </script>
+     
+<!--
+I created a second canvas with the id "dataCanvas" (this canvas will print just the the blue intensities of the image)
+I named my second canvas "canvas2" so that it does not have the same name as the first canvas
+This canvas has the identifying text "Blue image will go here"
+-->
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
