@@ -116,8 +116,9 @@
         /* 
         I am getting my image data (pixel data) with "context.getImageData" 
         I am getting my image data (pixel data) from the first canvas named "canvas" with "context" (id "myCanvas") rather than the second canvas named "canvas2" with "context2" (id "dataCanvas") because the original image is initially being loaded onto the first canvas
-          I am getting the image data to draw the image with pixels of only blue intensities (extracting blue intensities from pixels) on the second canvas from the original image drawn onto the first canvas (this is seen in "drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);")
-        With the "context2.putImageData" function below, I am printing the image data (pixel data) of the original image (loaded onto "myCanvas") with just the blue intensities of the pixels of the image onto the second canvas (id "dataCanvas")
+        
+        I am using "context.getImageData" to get the image data (pixel data) of the original image file uploaded onto the first canvas (id "myCanvas") with name of "context"
+        With the "context2.putImageData" function below, I am printing the image data (pixel data) of the original image (loaded onto "myCanvas", this is seen above with "drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500)") with just the blue intensities of the image's pixels onto the second canvas (id "dataCanvas") with name of "context2"
         */
          
         for(var i = 0, n = data.length; i < n; i += 4) {
@@ -131,8 +132,12 @@
         I am setting the red and green intensities of my pixels equal to 0, so every pixel of the image has only blue intensities 
        
         With "context2.putImageData", I am putting the image data (pixel data) of the original photo drawn onto the first canvas (id "myCanvas") with only the blue intensities of all the image's pixels on my second canvas (id "dataCanvas")
+        
+        Key Commands for Pixel Manipulation with Image File Upload and Two/Multiple Canvases
+        I am using "context.getImageData" to get the image data (pixel data) of the original image file uploaded onto the first canvas (id "myCanvas") with name of "context"
+        With the "context2.putImageData" function below, I am printing the image data (pixel data) of the original image (loaded onto "myCanvas", this is seen above in "drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500)") with just the blue intensities of the image's pixels onto the second canvas (id "dataCanvas") with name of "context2"
         */
-       
+         
         } // end of img.onload
         
         img.src = reader.result;
@@ -182,7 +187,7 @@
      
 <!--
 I created a second canvas with the id "dataCanvas" (this canvas will print just the the blue intensities of the image)
-I named my second canvas "canvas2" so that it does not have the same name as the first canvas
+I named my second canvas "canvas2" so that it does not have the same variable name as the first canvas
 I also named the conditions for the second canvas as "context2" so that it is differentiated from the first canvas (id "myCanvas", "context")
 This canvas has the identifying text "Blue image will go here"
 -->
